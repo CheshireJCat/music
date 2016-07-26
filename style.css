@@ -15,8 +15,10 @@ html,body{width:100%;}
 ul,ol,li{list-style:none;}
 .fl{float:left;}
 .fr{float:right;}
-.hide{display: none;}
 body{background-image:url(http://ww2.sinaimg.cn/large/ba92d609jw1f2n7ol2sfaj215o0u51kz.jpg);background-size:100% auto ;font-family:微软雅黑;background-attachment:fixed;background-position: 50% 20%;overflow:hidden;min-width: 860px;}
+@media(max-width:1023px){
+	body{background-size:auto 100%;background-position: 50% 0;}
+}
 /*搜索结果列表*/
 #list{position:absolute;width:25%;top:0;bottom:60px;right:0;overflow-x:hidden;overflow-y:auto;transition:all 0.8s;}
 #tips{position:absolute;width:25%;top:0;bottom:60px;right:0;z-index: -1;line-height:60px;font-size:30px;opacity:0;text-align:center;background-color:rgba(0,0,0,0.5);color:#fff;transition:all 0.3s ease-out;}
@@ -63,7 +65,6 @@ body{background-image:url(http://ww2.sinaimg.cn/large/ba92d609jw1f2n7ol2sfaj215o
 .singerBox .box2 img{width:76px;height:76px;position:absolute;left:0;top:0;z-index:1;}
 .singerBox .box2 span{height:100%;display:block;padding-left:76px;box-sizing:border-box;width:100%;font-size:30px;line-height:76px;}
 .panel.lrcBox{width:100%;}
-.panel.mvBox{width:100%;}
 .to-status1{width:50px;position:absolute;margin-left:-100%;margin-top:5px;}
 .to-status1:hover{color:#70EFEF;}
 .status2 .to-status1{margin-left:33.3333%;}
@@ -72,8 +73,8 @@ body{background-image:url(http://ww2.sinaimg.cn/large/ba92d609jw1f2n7ol2sfaj215o
 #loading span{display:block;top:50%;position:relative;}
 
 /*歌词*/
-.lrcMove{position: absolute;overflow-x:hidden;overflow-y:auto;top:50%;transition:margin-top 1s;min-height: 300px;height: auto;width: 100%;}
-.lrc{position:absolute;width: 100%;height: 100%;left: 0;top: 0;}
+.lrcMove{position:absolute;width:100%;overflow-x:hidden;overflow-y:auto;top:50%;transition:top 1s;min-height: 300px;}
+.lrcBottom,.lrc{position:absolute;width:100%;}
 .lrcBottom p,.lrc p{width:100%;height:60px;line-height:60px;overflow:hidden;opacity:0.3;}
 .lrc p.active{opacity:1;}
 .play-songName{position:absolute;left:300px;right:350px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
@@ -105,7 +106,7 @@ li.next{}
 .title li:hover{background-color:rgba(0,0,0,1);}
 
 /*搜索按钮*/
-.searchBox{position:absolute;top:-100%;height:80px;width:60%;left:20%;opacity:0;transition:all 0.5s ease-out;}
+.searchBox{position:absolute;top:-50%;height:80px;width:60%;left:20%;opacity:0;transition:all 0.5s ease-out;}
 .searchBox.active{top:50%;opacity:1;}
 .searchBox input{position:absolute;width:100%;font-size:25px;text-indent:10px;display:block;height:100%;background-color:rgba(255,255,255,0.8);}
 .searchBox span{display:block;position:absolute;top:0;right:0;width:80px;height:80px;text-align:center;line-height:100px;cursor:pointer;color:#fff;background-color:rgba(74,74,74,0.7);}
@@ -121,20 +122,3 @@ input[type=range]:focus::-webkit-slider-runnable-track{background:#70EFEF;}
 /*滚动条*/
 ::-webkit-scrollbar{background-color:#ddd;border-radius:5px;width:8px;height:8px;}
 ::-webkit-scrollbar-thumb{background-color:#aaa;border-radius:5px;width:8px;height:8px;}
-
-@media(max-width:1023px){
-	body{background-size:auto 100%;background-position: 50% 0;}
-}
-@media(max-width:667px){
-	.title{right: 0;}
-	.left{right: 0;bottom: 50%;}
-	#list{width: 100%;top: 50%;}
-	#tips{width: 100%;top: 50%;}
-	#loading{width: 100%;}
-	#list li{width: 100%;}
-	#list .song{width: auto;right: 50px;}
-	#list .info{width: auto;left:50px;}
-	#volume,#play-time{display: none;}
-	.play-songName{position: static;text-align: center;}
-	#video{width: 100%;}
-}
