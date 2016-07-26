@@ -16,7 +16,7 @@ ul,ol,li{list-style:none;}
 .fl{float:left;}
 .fr{float:right;}
 .hide{display: none;}
-body{background-image:url(http://ww2.sinaimg.cn/large/ba92d609jw1f2n7ol2sfaj215o0u51kz.jpg);background-size:100% auto ;font-family:微软雅黑;background-attachment:fixed;background-position: 50% 20%;overflow:hidden;min-width: 860px;}
+body{background-color: rgba(0,0,0,0.4);background-image:url(http://ww2.sinaimg.cn/large/ba92d609jw1f2n7ol2sfaj215o0u51kz.jpg);background-size:100% auto ;font-family:微软雅黑;background-attachment:fixed;background-position: 50% 20%;overflow:hidden;min-width: 860px;}
 /*搜索结果列表*/
 #list{position:absolute;width:25%;top:0;bottom:60px;right:0;overflow-x:hidden;overflow-y:auto;transition:all 0.8s;}
 #tips{position:absolute;width:25%;top:0;bottom:60px;right:0;z-index: -1;line-height:60px;font-size:30px;opacity:0;text-align:center;background-color:rgba(0,0,0,0.5);color:#fff;transition:all 0.3s ease-out;}
